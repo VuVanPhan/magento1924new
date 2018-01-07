@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			<action method="addJs">
+				<name helper="pagebuilder/data/getInlucdeJQqueryAdmin"></name>
+			</action>
+			<action method="addJs">
+				<name helper="pagebuilder/data/getInlucdeNoconflictAdmin"></name>
+			</action>
+			<action method="addJs">
+				<name helper="pagebuilder/data/getInlucdeMigrateAdmin"></name>
+			</action>
+			<action method="addJs">
+				<name helper="pagebuilder/data/getInlucdeModalAdmin"></name>
+			</action>
+			<action method="addJs">
+				<name helper="pagebuilder/data/getInlucdeJQqueryUiAdmin"></name>
+			</action>
+			<action method="addJs">
+				<file>sm/pagebuilder/jsplugin/renderercontentdesign.js</file>
+			</action>
+			<action method="addJs">
+				<file>sm/pagebuilder/jsplugin/rendererhelper.js</file>
+			</action>
+			<action method="addJs">
+				<file>sm/pagebuilder/jsplugin/rendererwidget.js</file>
+			</action>
+			<action method="addJs">
+				<file>sm/pagebuilder/jsplugin/pagebuilder.js</file>
+			</action>
+			<!--<action method="addItem">-->
+				<!--<type>skin_css</type>-->
+				<!--<name>sm/pagebuilder/css/bootstrap.css</name>-->
+			<!--</action>-->
+			<!--<action method="addItem">-->
+				<!--<type>skin_css</type>-->
+				<!--<name>sm/pagebuilder/css/foundation.css</name>-->
+			<!--</action>-->
+			<!--<action method="addItem">-->
+				<!--<type>skin_css</type>-->
+				<!--<name>sm/pagebuilder/css/bootstrap-theme.min.css</name>-->
+			<!--</action>-->
+			<action method="addItem">
+				<type>skin_css</type>
+				<name>sm/pagebuilder/css/pagebuilder.css</name>
+			</action>
+			<action method="addItem">
+				<type>skin_css</type>
+				<name>sm/pagebuilder/css/jquery.pagedesignmanager.css</name>
+			</action>
+			<action method="addItem">
+				<type>skin_css</type>
+				<name>sm/pagebuilder/css/font-awesome.css</name>
+			</action>
+			<action method="addItem">
+				<type>skin_css</type>
+				<name>sm/pagebuilder/css/jquery.modal.min.css</name>
+			</action>
+		</reference>
+	</default>
+	<pagebuilder_adminhtml_pagebuilder_index>
+		<update handle="editor" />
+		<reference name="content">
+			<block type="pagebuilder/adminhtml_pagebuilder" name="pagebuilder" />
+		</reference>
+	</pagebuilder_adminhtml_pagebuilder_index>
+
+	<pagebuilder_adminhtml_pagebuilder_indexWidget>
+		<update handle="editor" />
+		<remove name="footer"/>
+		<reference name="content">
+			<block type="pagebuilder/adminhtml_pagebuilder_widget" name="pagebuilder_widget" output="toHtml" />
+		</reference>
+	</pagebuilder_adminhtml_pagebuilder_indexWidget>
+</layout>
